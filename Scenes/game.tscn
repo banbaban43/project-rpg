@@ -1,9 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://yqbn6mltfl4n"]
+[gd_scene load_steps=4 format=3 uid="uid://yqbn6mltfl4n"]
 
 [ext_resource type="Script" uid="uid://dm5frfr3pamgs" path="res://Scenes/game.gd" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://c4wb0vljtggxq" path="res://Scenes/character_body_2d.tscn" id="2_qxrlw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qxrlw"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ebmjs")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_qxrlw")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-8658, -483)
+scale = Vector2(4970.252, 3906.25)
+texture = SubResource("PlaceholderTexture2D_qxrlw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-146, 37.000015)
+scale = Vector2(70.500015, 62.5)
+texture = SubResource("PlaceholderTexture2D_qxrlw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-26.999985, 84)
+scale = Vector2(70.500015, 62.5)
+texture = SubResource("PlaceholderTexture2D_qxrlw")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(128, 107)
+scale = Vector2(70.500015, 62.5)
+texture = SubResource("PlaceholderTexture2D_qxrlw")

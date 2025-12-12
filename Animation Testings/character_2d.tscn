@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://rs8j12frjs24"]
+
+[ext_resource type="Texture2D" uid="uid://cuotxqwrgy4vs" path="res://Class/Hero/KnightSprites/Knight-Body-Sheet.png" id="1_7d8wr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrgdl"]
+
+[node name="Character2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_rrgdl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2.71, 2.71)
+texture = ExtResource("1_7d8wr")
+hframes = 11
+vframes = 8
+
+[node name="Head" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(10, -1, 14, -3, 14, -19, 8, -24, -6, -24, -13, -17, -13, -6, -8, -1)
+
+[node name="ArmL" type="Polygon2D" parent="."]
+position = Vector2(8.360939, 0.99999994)
+rotation = 3.1415927
+scale = Vector2(1.0865036, -1)
+color = Color(1, 0.69411767, 1, 1)
+offset = Vector2(8, -1)
+polygon = PackedVector2Array(-9, -1, -13, 2, -13, 5.4568176, -13, 12, -9, 12, -8, 0)
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.6862745, 1, 1, 1)
+polygon = PackedVector2Array(-8, -1, 9, -1, 11, 1, 11, 13, -9, 13, -9, 0)
+
+[node name="ArmR" type="Polygon2D" parent="."]
+position = Vector2(2.5999994, 0)
+scale = Vector2(1.2, 1)
+color = Color(1, 0.69411767, 1, 1)
+polygon = PackedVector2Array(-9, -1, -13, 2, -13, 12, -9, 12, -8, 0)
+
+[node name="LegR" type="Polygon2D" parent="."]
+color = Color(1, 1, 0.78431374, 1)
+polygon = PackedVector2Array(1, 14, 0, 19, -8, 19, -8, 13, 1, 13)
+
+[node name="LegL" type="Polygon2D" parent="."]
+color = Color(1, 1, 0.78431374, 1)
+polygon = PackedVector2Array(3, 13, 3, 14, 4, 19, 11, 19, 11, 13)
+
+[node name="Torso" type="Bone2D" parent="."]
+position = Vector2(2, 13.000001)
+rotation = -1.5784118
+scale = Vector2(0.99999994, 0.99999994)

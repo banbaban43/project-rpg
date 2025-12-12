@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Project RPG"
 run/main_scene="uid://bjt1jb850aavd"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
