@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7dje7qdb88f4"]
+
+[ext_resource type="PackedScene" uid="uid://dmwhox2pw4q46" path="res://Animation 2/One-Sprite-Skeleton-Animation.tscn" id="1_br3ub"]
+
+[node name="Main Scene" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" parent="Node2D" instance=ExtResource("1_br3ub")]
+position = Vector2(121, 71)
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="UI_Layer" type="CanvasLayer" parent="."]
